@@ -1,2 +1,3 @@
-# Python for fun and profit
- \- A seminar for CSH on the fun and useful parts of Python they didn't teach you in CS1
+# CSH Python seminar
+A quick intro to some of the fun features of Python not covered in CS1. For Spring semester 2018.
+
