@@ -35,3 +35,15 @@ class State:
 stateStrsList = ["VA", "NY", "MA"]
 statesList = map(State, stateStrsList)
 print(list(statesList))
+
+print("How about a dictionary comprehension?")
+statesDict = {stateStr: State(stateStr) for stateStr in stateStrsList}
+print(statesDict)
+
+print("Now with sets")
+statesDict = {State(stateStr) for stateStr in stateStrsList}
+print(statesDict)
+
+print("And lists")
+statesDict = [State(stateStr) for stateStr in stateStrsList]
+print(statesDict)
