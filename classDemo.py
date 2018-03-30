@@ -32,18 +32,34 @@ class State:
     def __hash__(self):
         return hash(self.abbreviation)
 
-stateStrsList = ["VA", "NY", "MA"]
-statesList = map(State, stateStrsList)
-print(list(statesList))
+def main():
+    print("Docs for the class:")
+    State.printDocs()
 
-print("How about a dictionary comprehension?")
-statesDict = {stateStr: State(stateStr) for stateStr in stateStrsList}
-print(statesDict)
+    print("\nFunctions demo:")
+    print("State('VA') == State('NY') ->", State("VA") == State("NY"))
+    print("State('VA') == State('VA') ->", State("VA") == State("VA"))
+    print("State('VA') == 'VA' ->", State("VA") == "VA")
+    print("State('NY').containsRIT() ->", State("NY").containsRIT())
+    print("State('PA').containsRIT() ->", State("PA").containsRIT())
 
-print("Now with sets")
-statesDict = {State(stateStr) for stateStr in stateStrsList}
-print(statesDict)
+    stateStrsList = ["VA", "NY", "PA"]
 
-print("And lists")
-statesDict = [State(stateStr) for stateStr in stateStrsList]
-print(statesDict)
+    print("\nLet's try a map")
+    statesList = map(State, stateStrsList)
+    print(list(statesList))
+
+    print("\nHow about a dictionary comprehension?")
+    statesDict = {stateStr: State(stateStr) for stateStr in stateStrsList}
+    print(statesDict)
+
+    print("\nNow with sets")
+    statesDict = {State(stateStr) for stateStr in stateStrsList}
+    print(statesDict)
+
+    print("\nAnd lists")
+    statesDict = [State(stateStr) for stateStr in stateStrsList]
+    print(statesDict)
+
+if __name__ == "__main__":
+    main()
