@@ -11,7 +11,7 @@ app = Flask(__name__)
 @app.route("/")
 def index():
     return """<center>
-        <h1>You have reached tbe Flask demo sever</h1>
+        <h1>You have reached the Flask demo sever</h1>
         <small>I know this is a lazy solution...</small>
     </center>
     """
