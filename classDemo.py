@@ -32,6 +32,13 @@ class State:
     def __hash__(self):
         return hash(self.abbreviation)
 
+class WesternState(State):
+    """
+    This is a subclass of state.
+    """
+    def isOnFire(self):
+        return self.abbreviation == "CA"
+
 def main():
     print("Docs for the class:")
     State.printDocs()
@@ -42,6 +49,7 @@ def main():
     print("State('VA') == 'VA' ->", State("VA") == "VA")
     print("State('NY').containsRIT() ->", State("NY").containsRIT())
     print("State('PA').containsRIT() ->", State("PA").containsRIT())
+    print("WesternState('CA').isOnFire() ->", WesternState("CA").isOnFire())
 
     stateStrsList = ["VA", "NY", "PA"]
 
